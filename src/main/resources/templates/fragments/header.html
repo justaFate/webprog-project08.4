@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<header th:fragment="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold text-primary d-flex align-items-center" th:href="@{/}">
+                <i class="fa-solid fa-store me-2 text-warning"></i> WEBPROG STORE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/admin/categories}">
+                            <i class="fa-solid fa-layer-group me-1"></i> Quản lý Category (AJAX)
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/admin/products}">
+                            <i class="fa-solid fa-box-open me-1"></i> Quản lý Product (AJAX)
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a th:href="@{/swagger-ui/index.html}" target="_blank" class="btn btn-outline-info btn-sm me-2">
+                        <i class="fa-solid fa-file-code me-1"></i> Swagger 3 API Docs
+                    </a>
+                    <a th:href="@{/h2-console}" target="_blank" class="btn btn-outline-warning btn-sm">
+                        <i class="fa-solid fa-database me-1"></i> H2 Console
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+</body>
+</html>
+
