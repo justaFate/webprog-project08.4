@@ -98,3 +98,4 @@ public class CategoryProductApiTests {
                 .andExpect(jsonPath("$.body.content").isArray());
     }
 }
+
